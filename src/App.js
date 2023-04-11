@@ -1,25 +1,20 @@
-import { useState, memo, useCallback } from "react";
-import { Child1 } from "./components/Child1";
-import { Child4 } from "./components/Child4";
+import { useState } from "react";
+import { Card } from "./components/Card";
 
 export const App = memo(() => {
-  console.log("App Rendering");
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  const [num, setNum] = useState(0);
-
-  const onClickButton = () => {
-    setNum(num + 1);
-  };
-  const onClickReset = useCallback(() => {
-    setNum(0);
-  }, []);
+  const onClickSwitch = () => setIsAdmin(!isAdmin);
 
   return (
-    <>
-      <button onClick={onClickButton}>Button</button>
-      <p>{num}</p>
-      <Child1 onClickReset={onClickReset} />
-      <Child4 />
-    </>
+    <div>
+      {isAdmin ? (
+        <span>You are Administrator.</span>
+      ) : (
+        <span>You are not Administrator.</span>
+      )}
+      <button onClick={onClickSwitch}>Change</button>
+      <Card isAdmin={isAdmin} />
+    </div>
   );
 });
