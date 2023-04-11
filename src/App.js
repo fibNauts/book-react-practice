@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { AdminFlagContext } from "./providers/AdminFlagProvider";
+import { AdminFlagContext } from "./components/providers/AdminFlagProvider";
 import { Card } from "./components/Card";
 
 
