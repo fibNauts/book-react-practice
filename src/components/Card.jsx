@@ -5,7 +5,7 @@ const style = {
   height: "200px",
   margin: "8px",
   borderRadius: "8px",
-  backgroundColor: "#e9db0",
+  backgroundColor: "#e9dbd0",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
