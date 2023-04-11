@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "./components/Card";
 
-export const App = memo(() => {
+export const App = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   const onClickSwitch = () => setIsAdmin(!isAdmin);
@@ -17,4 +17,4 @@ export const App = memo(() => {
       <Card isAdmin={isAdmin} />
     </div>
   );
-});
+};
